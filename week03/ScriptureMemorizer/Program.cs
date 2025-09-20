@@ -1,4 +1,4 @@
-// Showing Creativity and Exceeding Requirements: Made the program support a library of multiple scriptures. Each time the program runs, one scripture is chosen at random for the user to practice.
+// Showing Creativity and Exceeding Requirements: Made the program support a library of multiple scriptures. Each time the program runs, one scripture is chosen at random for the user to practice. Also has an exception handling for environments where Console.Clear() is not supported since it throws an IOException when I try it on VSCode terminal.
 using System;
 using System.Collections.Generic;
 
@@ -51,7 +51,7 @@ class Program
         }
         catch (System.IO.IOException)
         {
-            // Fallback for environments where Console.Clear() is not supported since it throws an IOException when I try it on VSCode terminal
+            // Fallback for environments where Console.Clear() is not supported since it throws an IOException when I try it on VSCode terminal.
             Console.WriteLine(new string('\n', 40));
         }
     }
