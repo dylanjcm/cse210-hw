@@ -5,15 +5,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create addresses
         Address usaAddress = new Address("123 Main St", "Salt Lake City", "UT", "USA");
         Address intlAddress = new Address("45 Queen St", "Toronto", "ON", "Canada");
 
-        // Create customers
         Customer customer1 = new Customer("Alice Johnson", usaAddress);
         Customer customer2 = new Customer("Carlos Mendes", intlAddress);
 
-        // Create products
         Product p1 = new Product("Laptop", "L1001", 1200.00m, 1);
         Product p2 = new Product("Mouse", "M2002", 25.00m, 2);
         Product p3 = new Product("Keyboard", "K3003", 45.00m, 1);
@@ -21,7 +18,6 @@ class Program
         Product p4 = new Product("Headphones", "H4004", 60.00m, 1);
         Product p5 = new Product("Webcam", "W5005", 80.00m, 2);
 
-        // Create orders
         Order order1 = new Order(customer1);
         order1.AddProduct(p1);
         order1.AddProduct(p2);
@@ -31,7 +27,6 @@ class Program
         order2.AddProduct(p4);
         order2.AddProduct(p5);
 
-        // Display order details
         List<Order> orders = new List<Order> { order1, order2 };
 
         int count = 1;
